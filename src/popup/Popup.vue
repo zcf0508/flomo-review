@@ -1,22 +1,16 @@
 <script setup lang="ts">
-import { storageDemo } from '~/logic/storage'
-
-function openOptionsPage() {
-  browser.runtime.openOptionsPage()
-}
+import { config } from '~/logic/storage'
 </script>
 
 <template>
   <main class="w-[300px] px-4 py-5 text-center text-gray-700">
-    <Logo />
-    <div>Popup</div>
-    <SharedSubtitle />
-
-    <button class="btn mt-2" @click="openOptionsPage">
-      Open Options
-    </button>
-    <div class="mt-2">
-      <span class="opacity-50">Storage:</span> {{ storageDemo }}
-    </div>
+    <el-form>
+      <el-form-item label="Host">
+        <el-input v-model="config.host" />
+      </el-form-item>
+      <el-form-item label="Key">
+        <el-input v-model="config.key" />
+      </el-form-item>
+    </el-form>
   </main>
 </template>

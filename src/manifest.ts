@@ -39,7 +39,7 @@ export async function getManifest() {
       'https://*/',
     ],
     content_scripts: [{
-      matches: ['http://*/*', 'https://*/*'],
+      matches: ['https://*.flomoapp.com/mine'],
       js: ['./dist/contentScripts/index.global.js'],
     }],
     web_accessible_resources: [
