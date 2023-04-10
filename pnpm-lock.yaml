@@ -14,7 +14,7 @@ specifiers:
   '@vue/compiler-sfc': ^3.2.47
   '@vue/test-utils': ^2.3.0
   '@vueuse/core': ^9.13.0
-  api2d: ^0.1.11
+  api2d: ^0.1.13
   chokidar: ^3.5.3
   cross-env: ^7.0.3
   crx: ^5.0.1
@@ -55,7 +55,7 @@ devDependencies:
   '@vue/compiler-sfc': 3.2.47
   '@vue/test-utils': 2.3.0_vue@3.2.47
   '@vueuse/core': 9.13.0_vue@3.2.47
-  api2d: 0.1.11
+  api2d: 0.1.13
   chokidar: 3.5.3
   cross-env: 7.0.3
   crx: 5.0.1
@@ -1602,10 +1602,14 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /api2d/0.1.11:
-    resolution: {integrity: sha512-ckvc1uElZ29PzjNvgPWCIcpTGQbT5byH09ApY4GPpOGJCBPfBZG1z+SIdgwxrhyCvinqZ1lOmzJpm+yV8LWGGA==, tarball: http://ued.zuoyebang.cc:80/api2d/-/api2d-0.1.11.tgz}
+  /api2d/0.1.13:
+    resolution: {integrity: sha512-r70bS/ZW6WIMp5AgWimTRcTuTULH5ezOiRUVMutk9DalWxNb6+9CUokpqRDzKMRKMFQiNNERAgfLXIcZEmdJhw==, tarball: http://ued.zuoyebang.cc:80/api2d/-/api2d-0.1.13.tgz}
     dependencies:
       '@microsoft/fetch-event-source': 2.0.1
+      eventsource-parser: 1.0.0
+      node-fetch: 2.6.9
+    transitivePeerDependencies:
+      - encoding
     dev: true
 
   /archiver-utils/2.1.0:
@@ -3394,6 +3398,11 @@ packages:
   /event-target-shim/5.0.1:
     resolution: {integrity: sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==}
     engines: {node: '>=6'}
+    dev: true
+
+  /eventsource-parser/1.0.0:
+    resolution: {integrity: sha512-9jgfSCa3dmEme2ES3mPByGXfgZ87VbP97tng1G2nWwWx6bV2nYxm2AWCrbQjXToSe+yYlqaZNtxffR9IeQr95g==, tarball: http://ued.zuoyebang.cc:80/eventsource-parser/-/eventsource-parser-1.0.0.tgz}
+    engines: {node: '>=14.18'}
     dev: true
 
   /execa/4.1.0:
@@ -5270,6 +5279,18 @@ packages:
     resolution: {integrity: sha512-KIkvH1jl6b3O7es/0ShyCgWLcfXxlBrLBbP3rOr23WArC66IMcU4DeZEeYEOwnopYhawLTn7/y+YtmASe8DFVQ==}
     dev: true
 
+  /node-fetch/2.6.9:
+    resolution: {integrity: sha512-DJm/CJkZkRjKKj4Zi4BsKVZh3ValV5IR5s7LVZnW+6YMh0W1BfNA8XSs6DLMGYlId5F3KnA70uu2qepcR08Qqg==, tarball: http://ued.zuoyebang.cc:80/node-fetch/-/node-fetch-2.6.9.tgz}
+    engines: {node: 4.x || >=6.0.0}
+    peerDependencies:
+      encoding: ^0.1.0
+    peerDependenciesMeta:
+      encoding:
+        optional: true
+    dependencies:
+      whatwg-url: 5.0.0
+    dev: true
+
   /node-fetch/3.3.0:
     resolution: {integrity: sha512-BKwRP/O0UvoMKp7GNdwPlObhYGB5DQqwhEDQlNKuoqwVYSxkSZCSbHjnFFmUEtwSKRPU4kNK8PbDYYitwaE3QA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -6827,6 +6848,10 @@ packages:
       url-parse: 1.5.10
     dev: true
 
+  /tr46/0.0.3:
+    resolution: {integrity: sha1-gYT9NH2snNwYWZLzpmIuFLnZq2o=, tarball: http://ued.zuoyebang.cc:80/tr46/-/tr46-0.0.3.tgz}
+    dev: true
+
   /tr46/3.0.0:
     resolution: {integrity: sha512-l7FvfAHlcmulp8kr+flpQZmVwtu7nfRV7NZujtN0OqES8EL4O4e0qqzL0DC5gAvx/ZC/9lk6rhcUwYvkBnBnYA==}
     engines: {node: '>=12'}
@@ -7516,6 +7541,10 @@ packages:
     resolution: {integrity: sha512-LTtHb0yR49xa9irkstDxba4GATDAcDw3ncnFH9RImoFwDlW47U95ME5sn5IiQX2ghfaECaf6xyXM8yvClIBkkw==}
     dev: true
 
+  /webidl-conversions/3.0.1:
+    resolution: {integrity: sha1-JFNCdeKnvGvnvIZhHMFq4KVlSHE=, tarball: http://ued.zuoyebang.cc:80/webidl-conversions/-/webidl-conversions-3.0.1.tgz}
+    dev: true
+
   /webidl-conversions/7.0.0:
     resolution: {integrity: sha512-VwddBukDzu71offAQR975unBIGqfKZpM+8ZX6ySk8nYhVoo5CYaZyzt3YBvYtRtO+aoGlqxPg/B87NGVZ/fu6g==}
     engines: {node: '>=12'}
@@ -7548,6 +7577,13 @@ packages:
     dependencies:
       tr46: 3.0.0
       webidl-conversions: 7.0.0
+    dev: true
+
+  /whatwg-url/5.0.0:
+    resolution: {integrity: sha1-lmRU6HZUYuN2RNNib2dCzotwll0=, tarball: http://ued.zuoyebang.cc:80/whatwg-url/-/whatwg-url-5.0.0.tgz}
+    dependencies:
+      tr46: 0.0.3
+      webidl-conversions: 3.0.1
     dev: true
 
   /when/3.7.7:
