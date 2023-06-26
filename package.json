@@ -1,7 +1,7 @@
 {
   "name": "flomo-review",
   "displayName": "flomo review",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "packageManager": "pnpm@8.3.1",
   "description": "结合 chatGpt 的 memo 回顾浏览器扩展",
