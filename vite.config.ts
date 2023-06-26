@@ -109,6 +109,9 @@ export default defineConfig(({ command }) => ({
     },
   },
   build: {
+    watch: isDev
+      ? {}
+      : undefined,
     outDir: r('extension/dist'),
     emptyOutDir: false,
     sourcemap: isDev ? 'inline' : false,
@@ -118,7 +121,6 @@ export default defineConfig(({ command }) => ({
     },
     rollupOptions: {
       input: {
-        background: r('src/background/index.html'),
         popup: r('src/popup/index.html'),
       },
     },
